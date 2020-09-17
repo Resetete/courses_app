@@ -38,6 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # frontend CSS
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
+gem 'jquery-rails'
 
 
 group :development, :test do
