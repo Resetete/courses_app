@@ -13,7 +13,7 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
     if @student.save
       flash[:notice] = 'You have successfully created an account'
-      redirect_to root_path
+      redirect_to @student
     else
       flash[:alert] = 'Something went wrong, please try again'
       render 'new'
