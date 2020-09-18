@@ -1,22 +1,4 @@
-<% if @student.errors.any? %>
-  <div class="container">
-    <div class="row sign-up-form">
-      <div class="col s12 m12 l12">
-        <div class="card-panel orange">
-          <span class="white-text">
-            <strong> <%= pluralize(@student.errors.count, 'error') %>
-            prohibited your profile to be <%= @student.new_record? ? 'created' : 'updated' %> </strong>
-            <ul>
-              <% @student.errors.full_messages.each do |msg| %>
-                <li> <%= msg %> </li>
-              <% end %>
-            </ul>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
+<%= render 'shared/error_messages', obj: @student %>
 
 <div class="container">
   <div class="row center sign-up-form">
