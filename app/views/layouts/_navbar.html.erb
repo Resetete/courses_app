@@ -1,36 +1,34 @@
-<header>
-  <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-  </ul>
-  <ul id="dropdown2" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-  </ul>
-  <nav class="deep-purple darken-2">
-    <div class="container">
-      <div class="nav-wrapper">
-        <%= link_to '<em>MUSIC</em>Abra'.html_safe, root_path, class: "brand-logo center" %>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li> <%= link_to 'Home', root_path %> </li>
-          <li> <%= link_to 'New Courses', courses_new_path %> </li>
-          <li> <%= link_to 'About', about_path %> </li>
-          <!-- Dropdown Trigger -->
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-        <ul class="sidenav" id="mobile-demo">
-          <li><a href="sass.html">Courses</a></li>
-          <li><a href="badges.html">Enrollment</a></li>
-          <li><a href="collapsible.html">Account</a></li>
-          <!-- Dropdown Trigger -->
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-      </div>
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+<ul id="dropdown2" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+<nav class="deep-purple darken-2">
+  <div class="container">
+    <div class="nav-wrapper">
+      <%= link_to '<em>MUSIC</em>Abra'.html_safe, root_path, class: "brand-logo center" %>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li> <%= link_to 'Home', root_path %> </li>
+        <li> <%= link_to 'New Courses', courses_new_path %> </li>
+        <li> <%= link_to 'About', about_path %> </li>
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Courses</a></li>
+        <li><a href="badges.html">Enrollment</a></li>
+        <li><a href="collapsible.html">Account</a></li>
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
     </div>
-  </nav>
-</header>
+  </div>
+</nav>

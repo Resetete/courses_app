@@ -10,7 +10,10 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
+    <header>
+      <%= render 'layouts/navbar' %>
+      <%= render 'layouts/flash_messages' %>
+    </header>
 
     <main>
       <div class="container">
@@ -18,6 +21,8 @@
       </div>
     </main>
 
-    <%= render 'layouts/footer' %>
+    <footer class="page-footer deep-purple darken-2">
+      <%= render 'layouts/footer' %>
+    </footer>
   </body>
 </html>
