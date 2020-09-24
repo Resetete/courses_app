@@ -12,10 +12,20 @@
       <div class="card-content white-text">
         <span class="card-title"> <%= student.name %> </span>
         <p> <%= student.email %> </p>
-        <p> COURSE ENROLLMENTS: none </p>
+        <p> Course enrollments:
+          <% if student.courses.empty? %>
+            None
+          <% else %>
+            <ul>
+              <% student.courses.each do |course| %>
+                <li> <%= link_to course.name, course_path(course) %> </li>
+              <% end %>
+            </ul>
+          <% end %>
+        </p>
       </div>
       <div class="card-action">
-        <%= link_to 'View profile', student_path(student) %>
+        <%= link_to 'View profile', student_path(student), class: 'white space-adder' %>
       </div>
     </div>
   </div>
