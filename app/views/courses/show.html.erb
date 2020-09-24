@@ -1,0 +1,4 @@
+<h1> <%= @course.name %> </h1>
+<h3> Description </h3>
+
+<p> <%= pluralize(@course.students.count, 'enrolled student') %> </p>
