@@ -6,7 +6,8 @@
         <p> <%= @student.email %> </p>
       </div>
     </div>
-
-    <%= link_to "Edit your profile <i class='material-icons right'>create</i>".html_safe, edit_student_path(@student), class: "btn waves-effect waves-light" %>
+    <% if current_user == @student %>
+      <%= link_to "Edit your profile <i class='material-icons right'>create</i>".html_safe, edit_student_path(@student), class: "btn waves-effect waves-light" %>
+    <% end %>
   </div>
 </div>
