@@ -1,12 +1,16 @@
 <ul id="dropdown1" class="dropdown-content">
   <% if logged_in? %>
     <li> <%= link_to 'Profile', student_path(current_user) %>
+  <% elsif !logged_in? %>
+    <li> <%= link_to 'Sign up!', new_student_path %> </li>
   <% end %>
   <li> <%= session_link %> </li>
 </ul>
 <ul id="dropdown2" class="dropdown-content">
   <% if logged_in? %>
     <li> <%= link_to 'Profile', student_path(current_user) %>
+  <% elsif !logged_in? %>
+    <li> <%= link_to 'Sign up!', new_student_path %> </li>
   <% end %>
   <li> <%= session_link %> </li>
 </ul>
@@ -25,7 +29,10 @@
         <li> <%= link_to 'About', about_path %> </li>
       </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li> <%= link_to 'Sign up! <i class="material-icons right">create</i>'.html_safe, new_student_path, class: ' waves-effect waves-light btn' %> </li>
+        <% if !logged_in? %>
+          <li> <%= link_to 'Log in! <i class="material-icons right">arrow_forward</i>'.html_safe, new_student_path, class: ' waves-effect waves-light btn' %> </li>
+          <li> <%= link_to 'Sign up! <i class="material-icons right">create</i>'.html_safe, new_student_path, class: ' waves-effect waves-light btn' %> </li>
+        <% end %>
       </ul>
       <ul class="sidenav" id="mobile-demo">
         <li> <%= link_to 'Courses', root_path %> </li>
